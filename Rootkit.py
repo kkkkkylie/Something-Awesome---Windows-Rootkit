@@ -30,10 +30,13 @@ def zip_file(dir):
     zip_file = ZipFile(dir + '\data.zip', 'w')
 
     for filename in os.listdir(dir):
-        try:  
-            zip_file.write(dir + '\\' + filename)
-        except:
-            print('skip ' + filename)
+        if filename == "data.zip": 
+            continue
+        else: 
+            try:  
+                zip_file.write(dir + '\\' + filename)
+            except:
+                print('skip ' + filename)
     zip_file.close()
 
 def task(): 
