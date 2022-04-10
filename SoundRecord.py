@@ -7,7 +7,7 @@ try:
 except ModuleNotFoundError:
     from subprocess import call
 
-    call("pip install " + ' ' + 'wav', shell=True)
+    call("pip install " + ' ' + 'scipy', shell=True)
     call("pip install " + ' ' + 'numpy', shell=True)
     call("pip install " + ' ' + 'soundfile', shell=True)
     call("pip install " + ' ' + 'sounddevice', shell=True)

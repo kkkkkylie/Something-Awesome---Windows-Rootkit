@@ -1,7 +1,6 @@
 try: 
     import pyscreenshot
     from PIL import Image
-    from SetUpDir import dir
 
 except ModuleNotFoundError:
     from subprocess import call
